@@ -120,6 +120,18 @@ var person = {
   document.getElementById("demo").innerHTML = txt;
 
 
+  //Object.defineProperty with Setters and getters
+
+  Object.defineProperty(person, "language", {
+    get : function() { return language },
+    set : function(value) { language = value.toUpperCase()}
+  });
+  
+  
+person.language = "en";
+
+// Display Language
+document.getElementById("demo").innerHTML = person.language;
 
 
 
