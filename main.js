@@ -97,4 +97,30 @@ obj2.townName = 'Boston';
 //Display data from the object using a getter
 document.getElementById('demo3').innerHTML = obj2.townName;
 
+//Object.defineProperty() - lets you define an object property and change a property's value
+
+// Create an Object:
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+      language : "NO", 
+  };
+  // Change a Property:
+  Object.defineProperty(person, "language", {
+    value: "EN",
+    writable : true,
+    enumerable : true, // if enumerable is false it hides it from enumarition
+    configurable : true
+  });
+  // Enumerate Properties
+  txt = "";
+  for (var x in person) {
+    txt += person[x] + "<br>";
+  }
+  document.getElementById("demo").innerHTML = txt;
+
+
+
+
+
 
